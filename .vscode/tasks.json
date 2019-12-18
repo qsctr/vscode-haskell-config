@@ -97,6 +97,15 @@
                 "panel": "dedicated"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Run stylish-haskell",
+            "type": "shell",
+            "command": "stylish-haskell -i ${relativeFile}",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated"
+            }
         }
     ]
 }
