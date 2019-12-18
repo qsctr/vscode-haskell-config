@@ -55,6 +55,7 @@
             "type": "shell",
             "command": "stack hoogle --rebuild",
             "presentation": {
+                "focus": true,
                 "panel": "dedicated"
             },
             "problemMatcher": []
