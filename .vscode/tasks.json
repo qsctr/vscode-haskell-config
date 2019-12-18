@@ -1,0 +1,91 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build (unoptimized)",
+            "type": "shell",
+            "command": "stack build --fast",
+            "group": "build",
+            "presentation": {
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (optimized)",
+            "type": "shell",
+            "command": "stack build",
+            "group": "build",
+            "presentation": {
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install (unoptimized)",
+            "type": "shell",
+            "command": "stack install --fast",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Install (optimized)",
+            "type": "shell",
+            "command": "stack install",
+            "group": "build",
+            "presentation": {
+                "focus": true,
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Generate Hoogle database",
+            "type": "shell",
+            "command": "stack hoogle --rebuild",
+            "presentation": {
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Start Hoogle server",
+            "type": "shell",
+            "command": "stack hoogle --server",
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Open Hoogle",
+            "type": "shell",
+            "command": "xdg-open http://localhost:8080 && sleep 1",
+            "presentation": {
+                "reveal": "never",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Start and open Hoogle",
+            "dependsOn": [
+                "Start Hoogle server",
+                "Open Hoogle"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
