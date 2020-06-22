@@ -53,7 +53,7 @@
         {
             "label": "Generate Hoogle database",
             "type": "shell",
-            "command": "stack hoogle --rebuild",
+            "command": "stack hoogle -- generate --local=$(stack path --local-doc-root) --local=$(stack path --snapshot-doc-root) --database=\"$(stack path --local-hoogle-root)/database.foo\"",
             "presentation": {
                 "focus": true,
                 "panel": "dedicated"
