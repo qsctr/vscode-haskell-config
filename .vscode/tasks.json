@@ -63,7 +63,7 @@
         {
             "label": "Start Hoogle server",
             "type": "shell",
-            "command": "stack hoogle --server",
+            "command": "stack hoogle --server -- --database=\"$(stack path --local-hoogle-root)/database.hoo\"",
             "presentation": {
                 "reveal": "never",
                 "panel": "dedicated"
