@@ -94,7 +94,7 @@
         {
             "label": "Build compiler tools",
             "type": "shell",
-            "command": "stack build ghcide hoogle --copy-compiler-tool",
+            "command": "stack build hoogle --copy-compiler-tool",
             "presentation": {
                 "focus": true,
                 "panel": "dedicated"
