@@ -72,6 +72,15 @@
             "problemMatcher": []
         },
         {
+            "label": "Haddock and generate Hoogle database",
+            "dependsOn": [
+                "Haddock",
+                "Generate Hoogle database"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
             "label": "Start Hoogle server",
             "type": "shell",
             "command": "stack hoogle --server -- --database=\"$(stack path --local-hoogle-root)/database.hoo\"",
